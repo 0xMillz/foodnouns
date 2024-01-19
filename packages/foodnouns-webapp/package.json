@@ -1,7 +1,17 @@
 {
-  "name": "@nouns/webapp",
+  "name": "@foodnouns/webapp",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "yarn i18n:compile && react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "prepare": "yarn i18n:compile",
+    "i18n:extract": "lingui extract",
+    "i18n:compile": "lingui compile",
+    "i18n:pseudo": "lingui extract --locale pseudo && lingui compile"
+  },
   "dependencies": {
     "@apollo/client": "^3.3.21",
     "@davatar/react": "^1.10.3",
@@ -15,9 +25,9 @@
     "@lingui/macro": "^3.9.0",
     "@lingui/react": "^3.9.0",
     "@netlify/functions": "^0.7.2",
-    "@nouns/contracts": "npm:@nouns/contracts@0.2.0",
     "@nouns/assets": "npm:@coinmasters/assets@0.3.0",
     "@nouns/assets-latest": "npm:@nouns/assets@0.5.0",
+    "@nouns/contracts": "npm:@nouns/contracts@0.2.0",
     "@nouns/sdk": "npm:@coinmasters/sdk@0.2.0",
     "@nouns/sdk-latest": "npm:@nouns/sdk@0.4.0",
     "@reduxjs/toolkit": "^1.6.0",
@@ -69,17 +79,8 @@
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@types/react-router-dom": "^5.1.7",
-    "dotenv": "^10.0.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "yarn i18n:compile && react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "prepare": "yarn i18n:compile",
-    "i18n:extract": "lingui extract",
-    "i18n:compile": "lingui compile",
-    "i18n:pseudo": "lingui extract --locale pseudo && lingui compile"
+    "dotenv": "^10.0.0",
+    "ts-node": "^10.9.2"
   },
   "eslintConfig": {
     "extends": [

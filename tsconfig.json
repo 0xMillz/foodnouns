@@ -1,5 +1,8 @@
 {
+  "compilerOptions": {
+    "exclude": ["**/dist", "**/build", "**/*.config.ts"],
     "references": [
-        { "path": "packages/foodnouns-webapp" },
-    ]
+      { "path": "packages/foodnouns-webapp" }
+    ],
+  }
 }
