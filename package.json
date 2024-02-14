@@ -7,7 +7,7 @@
     "node": ">=16.20.0"
   },
   "scripts": {
-    "clean:nuke": "rm -rf node_modules yarn.lock"
+    "clean:root": "rm -rf node_modules yarn.lock"
   },
   "devDependencies": {
     "prettier": "^2.3.0",
